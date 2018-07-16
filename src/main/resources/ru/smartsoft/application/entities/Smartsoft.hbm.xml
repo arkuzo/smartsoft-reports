@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 15, 2018 10:44:06 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="ru.smartsoft.application.entities.FormRequest" optimistic-lock="version" schema="public" table="smartsoft">
+    <id name="recordid" type="int">
+      <column name="recordid"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="ssoid" type="string">
+      <column name="ssoid" not-null="true"/>
+    </property>
+    <property name="ts" type="timestamp">
+      <column length="29" name="ts" not-null="true"/>
+    </property>
+    <property name="grp" type="string">
+      <column name="grp" not-null="true"/>
+    </property>
+    <property name="type" type="string">
+      <column name="type" not-null="true"/>
+    </property>
+    <property name="subtype" type="string">
+      <column name="subtype" not-null="true"/>
+    </property>
+    <property name="url" type="string">
+      <column name="url"/>
+    </property>
+    <property name="origid" type="string">
+      <column name="origid"/>
+    </property>
+    <property name="formid" type="string">
+      <column name="formid"/>
+    </property>
+    <property name="code" type="string">
+      <column name="code"/>
+    </property>
+    <property name="ltpa" type="string">
+      <column name="ltpa"/>
+    </property>
+    <property name="sudirresponse" type="string">
+      <column name="sudirresponse"/>
+    </property>
+    <property name="ymdh" type="string">
+      <column name="ymdh"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Smartsoft reports</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="w3-container w3-dark-gray">
+            <h1>Smartsoft reports</h1>
+        </div>
+        
+        <button onclick="myFunction('last-hour')" class="w3-button w3-block w3-left-align w3-blue-gray w3-border-gray">
+            Last hour form usage</button>
+
+        <iframe id="last-hour" src="/last_hour_report" class="w3-container w3-hide w3-block"
+                style="border:none;" height="500"></iframe>
+                
+        <button onclick="myFunction('uncompleted')" class="w3-button w3-block w3-left-align w3-blue-gray w3-border-gray">
+            Uncompleted user requests</button>
+
+        <iframe id="uncompleted" src="/uncompleted_activity_report" class="w3-container w3-hide w3-block"
+                style="border:none;" height="500"></iframe>
+                
+        <button onclick="myFunction('top_5')" class="w3-button w3-block w3-left-align w3-blue-gray w3-border-gray">
+            Most recent used forms</button>
+
+        <iframe id="top_5" src="/forms_top_5" class="w3-container w3-hide w3-block"
+                style="border:none;" height="500"></iframe>
+    </body>
+</html>
+
+
+
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>

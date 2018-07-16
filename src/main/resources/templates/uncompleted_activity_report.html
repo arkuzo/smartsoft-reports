@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table class="w3-table w3-bordered w3-striped">
+            <thead>
+                <th>User Id</th>
+                <th>Last state</th>
+                <th>Date</th>
+            </thead>
+            <tbody>
+                <tr th:each="formRequest, rowStat: ${uncompleted_requests}">
+                    <td th:text="${formRequest.ssoid}"></td>
+                    <td th:text="${formRequest.subtype}"></td>
+                    <td th:text="${formRequest.ymdh}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
